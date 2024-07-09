@@ -19,4 +19,4 @@
 * char: ocupa 16 bits e armazena um único caracter no padrão Unicode. Valor mínimo: '\u0000 (0) e o máximo: '\uffff' (655350)
 *boolean: ocupa 1 bit de memória e aceita apenas verdadiro ou falso
 
-
+Referência [Java Básico](https://glysns.gitbook.io/java-basico/sintaxe/variaveis)

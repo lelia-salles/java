@@ -1,6 +1,8 @@
-# Classe e objeto
+# Classe e objeto, variáveis, tipos de dados, métodos, indentação
 
-## Padrão da nomenclatura
+Básico da sintaxe
+
+## Padrão da nomenclatura de classes
 
     nome do arquivo CalculadoraCientifica.java
 

@@ -46,3 +46,5 @@ Os operadores lógicos verificam uma variável booleana ou expressão relacional
 #### Ternário
 O operador ternário é um expressão booleana dentro de uma condição que admite dois valores
 <Expressão Condicional>`` ? ``<Caso condição seja true>`` :  ``<Caso condição seja false>
+
+Referência [Java Básico](https://glysns.gitbook.io/java-basico/sintaxe/variaveis)
