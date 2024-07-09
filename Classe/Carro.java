@@ -10,7 +10,7 @@ public class Carro{
         carro1.marca = "Ferrari";
         carro1.velocidade = 0;
 
-        // Acelerando o carro
+        // Acelerando o carro é ummétodo
         carro1.acelerar();
         carro1.acelerar();
         carro1.acelerar();
