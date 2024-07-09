@@ -113,3 +113,5 @@ concluirProcessamento() {}
 findById(int id){} // não se assuste, você verá muito método em inglês em sua jornada
 
 calcularImprimir(){} // há algo de errado neste método, ele deveria ter uma única finalidade
+
+Referência [Java Básico](https://glysns.gitbook.io/java-basico/sintaxe/variaveis)
