@@ -10,6 +10,7 @@ public class ProcessoSeletivo {
 		case1(1900.0, 2000.0);
 	}
 	static void case1(double salarioBase, double salarioPretendido) {
+	
 		
 		if(salarioBase > salarioPretendido) {
 			System.out.println("LIGAR PARA O CANDIDATO");
