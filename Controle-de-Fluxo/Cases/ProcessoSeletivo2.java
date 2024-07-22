@@ -9,11 +9,11 @@ public class ProcessoSeletivo2 {
 		//forma indexada
 		//quando preciso do indice para complementar a lógica
 		System.out.println("Imprimindo com a ordem de seleção pelo índice");
-		for(int x=0; x<candidatosSelecionados.length; x++) {
+		for(int x = 0; x < candidatosSelecionados.length; x++) {
 			System.out.println((x+1)+ "° Candidato é " + candidatosSelecionados [x] );
 		}
 		
-		//forma abrevida
+		//forma abreviada
 		//interação total sem precisar da posição ou indice
 		System.out.println("Imprimindo todos sem a necessidade de exibir o índice");
 		
