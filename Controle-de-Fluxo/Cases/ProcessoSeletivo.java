@@ -3,10 +3,10 @@ public class ProcessoSeletivo {
 		//salario base maior que salario pretendido
 		case1(2000.0, 1900.0);
 		
-		//salario base igual que salario pretendido
+		//salario base igual ao salario pretendido
 		case1(2000.0, 2000.0);
 		
-		//salario base igual que salario pretendido
+		//salario base menor ao salario pretendido
 		case1(1900.0, 2000.0);
 	}
 	static void case1(double salarioBase, double salarioPretendido) {
