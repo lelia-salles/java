@@ -1,4 +1,4 @@
-public abstract class ServicoMensagemInstantanea {
+public abstract class ServicoMensagemInstantanea2 {
 	
 	public abstract void enviarMensagem();
 	public abstract void receberMensagem();
