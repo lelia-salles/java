@@ -1,3 +1,3 @@
-public class Laserjet {
-    
+public class Laserjet extends impressora {
+
 }

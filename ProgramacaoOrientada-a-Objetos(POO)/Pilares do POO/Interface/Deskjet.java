@@ -1,3 +1,3 @@
-public class Deskjet {
-    
+public class Deskjet extends impressor{
+
 }
