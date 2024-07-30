@@ -1,4 +1,4 @@
-package equipamentos;
+package equipamentos.multifuncional;
 
 public class EquipamentoMultifuncional {
     

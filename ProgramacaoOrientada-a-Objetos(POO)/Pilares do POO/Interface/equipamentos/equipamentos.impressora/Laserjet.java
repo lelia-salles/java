@@ -1,4 +1,4 @@
-package equipamentos;
+package equipamentos.impressora;
 
 public class Laserjet extends impressora {
 

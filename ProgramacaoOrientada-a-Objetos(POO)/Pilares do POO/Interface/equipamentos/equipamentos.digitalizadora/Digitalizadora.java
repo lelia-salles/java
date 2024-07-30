@@ -1,4 +1,4 @@
-package equipamentos;
+package equipamentos.digitalizadora;
 
 public class Digitalizadora {
     pulic void digitalizar(){

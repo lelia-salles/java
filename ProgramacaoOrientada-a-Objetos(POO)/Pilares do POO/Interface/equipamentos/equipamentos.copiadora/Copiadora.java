@@ -1,4 +1,4 @@
-package equipamentos;
+package equipamentos.copiadora;
 
 public class Copiadora {
     pulic void copiar(){
