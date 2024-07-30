@@ -1,8 +1,8 @@
 package estabelecimentos;
 
-public class Loja {
+public class Fabrica {
     public static void main(String[] args) {
-        
+
     }
     }
 }
