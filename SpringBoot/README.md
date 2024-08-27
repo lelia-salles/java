@@ -35,7 +35,7 @@ graph TD
     F --> F1[Spring Test]
     G --> G1[Spring Security]
     H --> H1[Spring Cloud]
-```
+
 **1. Core Container**
 
 * Spring Core: É o núcleo do framework. Este módulo fornece o mecanismo de injeção de dependência (IoC - Inversion of Control), permitindo que os objetos sejam configurados e gerenciados de forma declarativa.
