@@ -308,13 +308,6 @@ No contexto do Spring Boot, starters são pacotes de dependências pré-configur
 * openfeign: Client HTTP baseado em interfaces
 * actuator: Gerenciamento de monitoramento da aplicação. 
 
-## Primeiros Passos
-
-1. Acessar [https://start.spring.io/](https://start.spring.io/)
-2. Preencher e selecionar as especificações do projeto
-3. Selecionar Dependências
-
-
 Benefícios do Starter: coesão, versões compatíveis, otimização do tempo, configuração simples, foco no negócio.
 
 ### Referências
