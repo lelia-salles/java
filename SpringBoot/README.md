@@ -50,3 +50,15 @@ Spring Test: Fornece suporte para testes de unidade e integração com o framewo
 **7. Cloud**
 
 * Spring Cloud: Um conjunto de ferramentas para construção de sistemas distribuídos e nativos da nuvem, facilitando a implementação de padrões como configuração distribuída, descoberta de serviços, circuit breakers, e muito mais.
+
+## Spring vs Java EE
+
+| Aspecto                    | Java EE                                              | Spring Boot                                         |
+|----------------------------|------------------------------------------------------|-----------------------------------------------------|
+| **Arquitetura e Abordagem**| Especificação completa com APIs e diretrizes, baseada em servidores de aplicação como WildFly e GlassFish. | Framework que facilita a criação de aplicações autossuficientes com configuração mínima e contêiner embutido. |
+| **Facilidade de Uso**      | Mais complexo, exige configuração manual e conhecimento detalhado dos servidores de aplicação. | Focado na simplicidade e rapidez, com configuração automática e menor esforço de desenvolvimento. |
+| **Configuração**           | Utiliza arquivos XML e anotações, exigindo configuração manual para componentes como EJBs e JMS. | Adota configuração automática com arquivos `application.properties` ou `application.yml` e suporte a anotações. |
+| **Desempenho e Escalabilidade** | Projetado para aplicações grandes e escaláveis, mas pode exigir ajuste de desempenho. | Otimizado para iniciar rapidamente e escalar, ideal para microserviços e aplicações em nuvem. |
+| **Comunidade e Suporte**   | Suportado por grandes empresas como Oracle e IBM, com uma comunidade robusta e recursos corporativos. | Mantido pela Pivotal e uma comunidade vibrante, com ampla documentação e suporte para novas tecnologias. |
+| **Evolução e Inovação**    | Evolui mais lentamente com processos de padronização, agora parte da Eclipse Foundation como Jakarta EE. | Evolui rapidamente com novas funcionalidades e melhorias frequentes, focado em inovação prática. |
+
