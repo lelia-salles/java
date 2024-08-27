@@ -1,4 +1,4 @@
-# SpringBoot
+# Spring Framework
 
 **Spring** é um framework open source desenvolvido para a plataforma Java baseado nos padrões de projetos de inversão de controle (atribuir responsabilidade a um conteiner) e injeção de dependência (adquirir recursos necessários para a aplicação).
 
@@ -275,4 +275,17 @@ A injeção **byConstructor** é baseada no tipo dos parâmetros do construtor. 
   ```
 
   No exemplo acima, o Spring cria uma instância de `MyService` e injeta uma instância de `MyRepository` no construtor de `MyService`, com base no tipo do parâmetro do construtor.
+
+# Springboot
+
+Enquanto o Spring Framework é baseado no padrão de injeção de dependências, o Springboot foca na configuração automática.
+
+| **Aspecto**             | **Spring Framework**                                                                 | **Spring Boot**                                                                 |
+|-------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| **Configuração**        | Requer configurações detalhadas, muitas vezes em arquivos XML.                       | Minimiza configurações com automação e anotações.                               |
+| **Inicialização**       | Pode ser mais demorado devido à necessidade de configurações manuais.                | Permite iniciar rapidamente com menos código e configurações.                   |
+| **Dependências**        | Necessário adicionar cada dependência manualmente.                                   | Simplifica a gestão de dependências com "starters".                             |
+| **Servidor Embutido**   | Não possui servidor embutido, requer configuração externa.                           | Inclui servidores embutidos como Tomcat ou Jetty.                               |
+| **Funcionalidades**     | Oferece suporte a IoC, DI, Spring MVC, Spring Security, Spring Data, Spring AOP, etc. | Inclui todas as funcionalidades do Spring Framework com configurações simplificadas. |
+| **Monitoramento**       | Requer configuração adicional para monitoramento e métricas.                         | Ferramentas integradas para monitoramento e métricas.                           |
 
