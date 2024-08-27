@@ -308,6 +308,11 @@ No contexto do Spring Boot, starters são pacotes de dependências pré-configur
 * openfeign: Client HTTP baseado em interfaces
 * actuator: Gerenciamento de monitoramento da aplicação. 
 
+## Primeiros Passos
+
+1. Acessar [https://start.spring.io/](https://start.spring.io/)
+2. Preencher e selecionar as especificações do projeto
+3. Selecionar Dependências
 
 
 Benefícios do Starter: coesão, versões compatíveis, otimização do tempo, configuração simples, foco no negócio.
@@ -318,4 +323,5 @@ Benefícios do Starter: coesão, versões compatíveis, otimização do tempo, c
 3. [https://www.reply.com](https://www.reply.com/solidsoft-reply/en/content/webservices-soap-and-rest-a-simple-introduction)
 4. [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/difference-between-spring-and-spring-boot/)
 5. [https://github.com/digitalinnovationone](https://github.com/digitalinnovationone/dio-springboot)
+6. []()
 
