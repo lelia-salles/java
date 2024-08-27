@@ -74,8 +74,14 @@ Por exemplo, se um componente precisa de um serviço, ele mesmo cria uma instân
 
 Existem várias formas de implementar a IoC, mas uma das mais comuns é a ```injeção de dependência.``` Na injeção de dependência, o contêiner IoC fornece os objetos necessários para um componente quando ele é instanciado. 
 
-Isso pode ocorrer através de injeção por [construtor](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO)/Construtores), injeção por [setter](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO)/Getter_Setters/) ou injeção por método. Por exemplo, em um framework como o Spring, você pode definir como um objeto deve ser criado e quais suas dependências em um arquivo de configuração ou por anotações. O contêiner Spring então cria o objeto, resolve suas dependências e o injeta no lugar apropriado no momento da execução.
+Isso pode ocorrer através de injeção por [construtor](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO)/Construtores), injeção por [setter](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO)/Getter_Setters/) ou injeção por método. 
 
-A principal vantagem da IoC é o desacoplamento. Ao transferir a responsabilidade pela criação e gestão de objetos para um contêiner externo, você reduz a dependência direta entre os componentes do sistema. Isso facilita a substituição e a modificação de componentes, promove o reuso e melhora a testabilidade, pois você pode facilmente injetar mocks ou stubs em vez de instâncias reais durante os testes.
+Por exemplo, em um framework como o Spring, você pode definir como um objeto deve ser criado e quais suas dependências em um arquivo de configuração ou por anotações. 
+
+O contêiner Spring então cria o objeto, resolve suas dependências e o injeta no lugar apropriado no momento da execução.
+
+A principal vantagem da IoC é o **desacoplamento**. Ao transferir a responsabilidade pela criação e gestão de objetos para um contêiner externo, você reduz a dependência direta entre os componentes do sistema. 
+
+Isso facilita a substituição e a modificação de componentes, promove o reuso e melhora a testabilidade, pois você pode facilmente injetar mocks ou stubs em vez de instâncias reais durante os testes.
 
 Em resumo, a inversão de controle permite que os componentes do sistema sejam mais flexíveis e independentes, resultando em um design mais modular e de fácil manutenção.
