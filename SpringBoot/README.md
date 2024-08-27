@@ -62,3 +62,20 @@ Spring Test: Fornece suporte para testes de unidade e integração com o framewo
 | **Comunidade e Suporte**   | Suportado por grandes empresas como Oracle e IBM, com uma comunidade robusta e recursos corporativos. | Mantido pela Pivotal e uma comunidade vibrante, com ampla documentação e suporte para novas tecnologias. |
 | **Evolução e Inovação**    | Evolui mais lentamente com processos de padronização, agora parte da Eclipse Foundation como Jakarta EE. | Evolui rapidamente com novas funcionalidades e melhorias frequentes, focado em inovação prática. |
 
+## Inversão de Controle (IoC)
+
+A inversão de controle (IoC, do inglês Inversion of Control) é um princípio fundamental no design de software que visa desacoplar componentes de um sistema, facilitando a modularidade e a manutenção. 
+
+Em termos simples, a IoC refere-se à mudança na responsabilidade pela criação e gerenciamento de objetos de uma aplicação do próprio código de implementação para um mecanismo externo (container).
+
+Tradicionalmente, em um [programa orientado a objetos](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO)), um componente cria suas próprias dependências e controla seu ciclo de vida. 
+
+Por exemplo, se um componente precisa de um serviço, ele mesmo cria uma instância desse serviço ou o busca de alguma forma. Com a **inversão de controle, essa responsabilidade é delegada a um contêiner ou framework**, que cuida da criação e gerenciamento dos objetos e suas dependências.
+
+Existem várias formas de implementar a IoC, mas uma das mais comuns é a ```injeção de dependência.``` Na injeção de dependência, o contêiner IoC fornece os objetos necessários para um componente quando ele é instanciado. 
+
+Isso pode ocorrer através de injeção por [construtor](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO)/Construtores), injeção por [setter](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO)/Getters-e-Setters) ou injeção por método. Por exemplo, em um framework como o Spring, você pode definir como um objeto deve ser criado e quais suas dependências em um arquivo de configuração ou por anotações. O contêiner Spring então cria o objeto, resolve suas dependências e o injeta no lugar apropriado no momento da execução.
+
+A principal vantagem da IoC é o desacoplamento. Ao transferir a responsabilidade pela criação e gestão de objetos para um contêiner externo, você reduz a dependência direta entre os componentes do sistema. Isso facilita a substituição e a modificação de componentes, promove o reuso e melhora a testabilidade, pois você pode facilmente injetar mocks ou stubs em vez de instâncias reais durante os testes.
+
+Em resumo, a inversão de controle permite que os componentes do sistema sejam mais flexíveis e independentes, resultando em um design mais modular e de fácil manutenção.
