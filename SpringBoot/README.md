@@ -104,4 +104,25 @@ Esse padrão oferece várias vantagens, incluindo a redução do acoplamento ent
 
 Além disso, a injeção de dependência ajuda a centralizar a configuração e o gerenciamento de dependências, tornando o código mais fácil de manter e evoluir.
 
+## Beans
+
+No contexto do Spring Framework, um **bean** é um objeto que é gerenciado pelo contêiner Spring. Representa componentes essenciais de uma aplicação é criado, configurado e mantido pelo contêiner, que cuida de seu ciclo de vida e suas dependências.
+
+São objetos gerenciados pelo contêiner Spring, cuja criação e configuração são controladas externamente, promovendo um design desacoplado e facilitando a manutenção e a evolução da aplicação.
+
+
+Um bean no Spring **é basicamente uma instância de uma classe** que o contêiner Spring configura e gerencia. A configuração dos beans é **geralmente feita em arquivos de configuração XML, por anotações no código ou por meio de uma configuração baseada em Java**. O contêiner utiliza essas configurações para criar e injetar beans conforme necessário.
+
+```Os beans são definidos com base em configurações fornecidas pelo desenvolvedor, como o escopo de vida (por exemplo, singleton ou prototype), as dependências que eles precisam (que são injetadas pelo contêiner), e outras propriedades específicas.```
+
+O Spring cuida de instanciar o bean, resolver suas dependências e, em muitos casos, garantir que ele seja adequadamente inicializado e finalizado.
+
+A principal **vantagem** do uso de beans no Spring é o **gerenciamento centralizado e a desacoplação dos componentes da aplicação**. 
+
+Ao permitir que o contêiner Spring crie e gerencie beans, você **reduz a necessidade de código manual** para a criação e configuração desses componentes, o que resulta em um design mais modular e flexível. 
+
+Além disso, isso **facilita o gerenciamento de aspectos como transações, segurança e aspectos de integração com outras tecnologias**, uma vez que o contêiner pode aplicar essas funcionalidades de forma consistente e automatizada.
+
+
+
 
