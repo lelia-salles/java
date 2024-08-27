@@ -6,29 +6,6 @@ A estrutura é baseada em módulos para reduzir a complexidade, ou sehja, cada f
 
 ## Spring Módulos
 
-```mermaid
-graph TD
-    A[Spring Framework] --> B[Core Container]
-    A --> C[Data Access & Integration]
-    A --> D[Web]
-    A --> E[AOP]
-    A --> F[Testing]
-    A --> G[Security]
-    A --> H[Cloud]
-
-    B --> B1[Spring Core]
-    B --> B2[Spring Beans]
-    B --> B3[Spring Context]
-    B --> B4[SpEL]
-
-    C --> C1[JDBC]
-    C --> C2[ORM]
-    C --> C3[Transaction Management]
-    C --> C4[Spring Data]
-
-   
-
-
 **1. Core Container**
 
 * Spring Core: É o núcleo do framework. Este módulo fornece o mecanismo de injeção de dependência (IoC - Inversion of Control), permitindo que os objetos sejam configurados e gerenciados de forma declarativa.
