@@ -299,7 +299,23 @@ Enquanto o Spring Framework é baseado no padrão de injeção de dependências,
 
 No contexto do Spring Boot, starters são pacotes de dependências pré-configurados que facilitam a inclusão de funcionalidades específicas em um projeto. Por exemplo:
 
-* spring-boot-starter-web: Inclui todas as dependências necessárias para desenvolver aplicações web.
-* spring-boot-starter-data-jpa: Inclui dependências para trabalhar com JPA e bancos de dados relacionais.
+data-jpa: Integração ao banco de dados via JPA - Hibernate.
+data-mongodb: Interação com banco de dados MongoDB.
+web: Inclusão do container Tomcat para aplicações REST.
+web-services: Webservices baseados na arquitetura SOAP. 
+batch: Implementação de JOBs de processos.
+test: Disponibilização de recursos para testes unitários como JUnit
+openfeign: Client HTTP baseado em interfaces
+actuator: Gerenciamento de monitoramento da aplicação. 
+
+
 
 Benefícios do Starter: coesão, versões compatíveis, otimização do tempo, configuração simples, foco no negócio.
+
+### Referências
+1. [www.fusion-reactor.com](https://www.fusion-reactor.com/blog/the-difference-between-spring-framework-vs-spring-boot/)
+2. [https://dev.to](https://dev.to/eduwyre/settling-spring-vs-spring-boot-debate-8ek )
+3. [https://www.reply.com](https://www.reply.com/solidsoft-reply/en/content/webservices-soap-and-rest-a-simple-introduction)
+4. [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/difference-between-spring-and-spring-boot/)
+5. [https://github.com/digitalinnovationone](https://github.com/digitalinnovationone/dio-springboot)
+
