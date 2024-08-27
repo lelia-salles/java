@@ -299,14 +299,14 @@ Enquanto o Spring Framework é baseado no padrão de injeção de dependências,
 
 No contexto do Spring Boot, starters são pacotes de dependências pré-configurados que facilitam a inclusão de funcionalidades específicas em um projeto. Por exemplo:
 
-data-jpa: Integração ao banco de dados via JPA - Hibernate.
-data-mongodb: Interação com banco de dados MongoDB.
-web: Inclusão do container Tomcat para aplicações REST.
-web-services: Webservices baseados na arquitetura SOAP. 
-batch: Implementação de JOBs de processos.
-test: Disponibilização de recursos para testes unitários como JUnit
-openfeign: Client HTTP baseado em interfaces
-actuator: Gerenciamento de monitoramento da aplicação. 
+* data-jpa: Integração ao banco de dados via JPA - Hibernate.
+* data-mongodb: Interação com banco de dados MongoDB.
+* web: Inclusão do container Tomcat para aplicações REST.
+* web-services: Webservices baseados na arquitetura SOAP. 
+* batch: Implementação de JOBs de processos.
+* test: Disponibilização de recursos para testes unitários como JUnit
+* openfeign: Client HTTP baseado em interfaces
+* actuator: Gerenciamento de monitoramento da aplicação. 
 
 
 
