@@ -7,7 +7,7 @@
         <groupId>org.springframework boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.3</version>
-        </realtivePath>
+        </realtivePath> <!--lookup parent from repository-->
     </parente>
 
     <groupId>dio</groupId>
