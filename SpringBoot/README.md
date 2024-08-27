@@ -9,9 +9,9 @@ A estrutura é baseada em módulos para reduzir a complexidade, ou sehja, cada f
 ```mermaid
 graph TD
     A[Spring Framework] --> B[Core Container]
-    A --> C[Data Access/Integration]
+    A --> C[Data Access & Integration]
     A --> D[Web]
-    A --> E[AOP (Aspect-Oriented Programming)]
+    A --> E[AOP]
     A --> F[Testing]
     A --> G[Security]
     A --> H[Cloud]
@@ -26,15 +26,8 @@ graph TD
     C --> C3[Transaction Management]
     C --> C4[Spring Data]
 
-    D --> D1[Spring Web]
-    D --> D2[Spring WebMVC]
-    D --> D3[Spring WebFlux]
-    D --> D4[Spring WebSocket]
+   
 
-    E --> E1[Spring AOP]
-    F --> F1[Spring Test]
-    G --> G1[Spring Security]
-    H --> H1[Spring Cloud]
 
 **1. Core Container**
 
