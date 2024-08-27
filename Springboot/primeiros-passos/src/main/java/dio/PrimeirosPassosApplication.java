@@ -4,6 +4,6 @@ package dio;
 
 public class PrimeirosPassosApplication {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SpringBootApplication.run(PrimeirosPassosApplication.class, args);
     }
 }
