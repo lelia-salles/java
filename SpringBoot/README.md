@@ -278,6 +278,12 @@ A injeção **byConstructor** é baseada no tipo dos parâmetros do construtor. 
 
 # Springboot
 
+O Spring Boot é uma extensão do Spring Framework que facilita o desenvolvimento de aplicações Java ao simplificar a configuração e inicialização. Ele oferece configurações automáticas, dependências “starter” para incluir bibliotecas necessárias, e servidores embutidos como **Tomcat** ou **Jetty**, eliminando a necessidade de configuração externa. 
+
+Antes do Springboot havia maior dependência individual, verbosidade, incompatibilidade entre versões, complexidade de gestão, configurações complexas e repetitivas
+
+Com o Spring Boot, é possível criar aplicações robustas e prontas para produção com menos esforço e código, tornando o desenvolvimento mais ágil e eficiente.
+
 Enquanto o Spring Framework é baseado no padrão de injeção de dependências, o Springboot foca na configuração automática.
 
 | **Aspecto**             | **Spring Framework**                                                                 | **Spring Boot**                                                                 |
@@ -289,3 +295,9 @@ Enquanto o Spring Framework é baseado no padrão de injeção de dependências,
 | **Funcionalidades**     | Oferece suporte a IoC, DI, Spring MVC, Spring Security, Spring Data, Spring AOP, etc. | Inclui todas as funcionalidades do Spring Framework com configurações simplificadas. |
 | **Monitoramento**       | Requer configuração adicional para monitoramento e métricas.                         | Ferramentas integradas para monitoramento e métricas.                           |
 
+## Starters
+
+No contexto do Spring Boot, starters são pacotes de dependências pré-configurados que facilitam a inclusão de funcionalidades específicas em um projeto. Por exemplo:
+
+* spring-boot-starter-web: Inclui todas as dependências necessárias para desenvolver aplicações web.
+* spring-boot-starter-data-jpa: Inclui dependências para trabalhar com JPA e bancos de dados relacionais.
