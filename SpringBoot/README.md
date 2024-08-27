@@ -123,6 +123,156 @@ Ao permitir que o contêiner Spring crie e gerencie beans, você **reduz a neces
 
 Além disso, isso **facilita o gerenciamento de aspectos como transações, segurança e aspectos de integração com outras tecnologias**, uma vez que o contêiner pode aplicar essas funcionalidades de forma consistente e automatizada.
 
+## Scope
 
+Existem 5 tipos de escopo categorizados para conceitos ```standalone``` e ```http(web)```
 
+No Spring Framework, o **escopo** de um bean determina a sua vida útil e a forma como o contêiner gerencia suas instâncias. Em outras palavras, o escopo define quantas instâncias de um bean existirão e por quanto tempo elas serão mantidas pelo contêiner Spring. Existem vários escopos predefinidos que você pode configurar para beans, cada um com características específicas que atendem a diferentes necessidades de aplicação.
+
+1. **Singleton** (padrão): É o escopo mais comum, onde o Spring cria uma única instância do bean e a reutiliza em toda a aplicação. Essa instância única é compartilhada entre todos os componentes que solicitam o bean, o que economiza recursos e melhora o desempenho. O bean no escopo singleton é criado quando o contêiner é iniciado e destruído quando o contêiner é encerrado.
+
+2. **Prototype**: Nesse escopo, o Spring cria uma nova instância do bean cada vez que ele é solicitado. Isso é útil para beans que mantêm estado ou têm comportamento específico para cada instância. Beans com escopo prototype não são gerenciados pelo contêiner depois que são criados, portanto, o gerenciamento do ciclo de vida após a criação fica a cargo do desenvolvedor.
+
+3. **Request**: Este escopo é específico para aplicações web e cria uma nova instância do bean para cada solicitação HTTP. Isso significa que cada solicitação recebe uma instância separada do bean, e essa instância é destruída ao final da solicitação. É útil para beans que precisam manter estado relacionado a uma única requisição do usuário.
+
+4. **Session**: Também específico para aplicações web, o escopo session cria uma nova instância do bean para cada sessão HTTP. A instância do bean é associada a uma sessão do usuário e é destruída quando a sessão termina. Esse escopo é adequado para beans que precisam manter estado ao longo de uma sessão do usuário.
+
+Claro! Vou completar a explicação do escopo **Global Session**:
+
+5. **Global Session**: É semelhante ao escopo **Session**, mas é utilizado em ambientes de múltiplos portais, como em aplicações web que utilizam portlets. O escopo **Global Session** cria uma instância do bean para cada sessão global e mantém essa instância durante a vida da sessão global. Esse escopo é útil em contextos onde múltiplas aplicações ou portlets compartilham a mesma sessão global e precisam acessar e manipular o mesmo estado de sessão.
+
+## Autowired
+
+Uma anotação onde deverá ocorrer uma injeção automática de dependência
+
+* byName - busca o método set que corresponde ao nome do Bean
+* byName - considera o tipo da classe para a inclusão do Bean
+* byType - usamos o construtor para incluir a dependência
+
+O **@Autowired** é uma anotação fornecida pelo Spring Framework que facilita a injeção de dependências em componentes Spring. Essa anotação permite que o Spring resolva e injetar automaticamente as dependências de um bean, eliminando a necessidade de configuração manual e explícita.
+
+Quando um bean é anotado com **@Autowired**, o Spring tenta encontrar e injetar uma instância do tipo especificado no bean anotado. Isso pode ocorrer em diversos contextos, como em construtores, métodos setters ou diretamente em campos. A injeção pode ser feita de três maneiras principais:
+
+1. **Injeção por Construtor**: A anotação **@Autowired** pode ser aplicada ao construtor de uma classe. O Spring identificará quais dependências devem ser injetadas com base nos parâmetros do construtor e as fornecerá automaticamente quando criar o bean.
+
+   ```java
+   @Component
+   public class MyService {
+       private final MyRepository repository;
+
+       @Autowired
+       public MyService(MyRepository repository) {
+           this.repository = repository;
+       }
+   }
+   ```
+
+2. **Injeção por Setter**: **@Autowired** pode ser aplicada a um método setter. O Spring chamará esse método após a criação do bean, passando a dependência necessária como argumento.
+
+   ```java
+   @Component
+   public class MyService {
+       private MyRepository repository;
+
+       @Autowired
+       public void setRepository(MyRepository repository) {
+           this.repository = repository;
+       }
+   }
+   ```
+
+3. **Injeção por Campo**: **@Autowired** também pode ser aplicada diretamente em campos da classe. O Spring injetará a dependência diretamente no campo correspondente. Embora seja mais simples, essa abordagem é menos recomendada porque torna o código menos testável e mais difícil de manter.
+
+   ```java
+   @Component
+   public class MyService {
+       @Autowired
+       private MyRepository repository;
+   }
+   ```
+
+O Spring realiza a injeção de dependências com base no tipo do bean. Se houver mais de uma instância do tipo desejado, o Spring tentará resolver o conflito com base em nomes ou qualificadores adicionais. Em casos onde não há uma instância disponível e a injeção não é obrigatória, o Spring pode configurar o bean para ser `null`, ou você pode usar o atributo `required=false` para indicar que a injeção é opcional.
+
+Em resumo, **@Autowired** simplifica a injeção de dependências, permitindo que o Spring gerencie automaticamente as instâncias e resolva as dependências necessárias, promovendo um design mais limpo e desacoplado.
+
+No Spring Framework, **byName**, **byType** e **byConstructor** são estratégias para a injeção de dependências que o contêiner Spring pode utilizar para resolver e fornecer as dependências necessárias a um bean. Cada estratégia determina a forma como o Spring identifica e injeta as dependências. Aqui está uma explicação de cada uma:
+
+### 1. **byName**
+
+A injeção **byName** é baseada no nome do bean. Quando o Spring utiliza essa estratégia, ele procura por um bean com o mesmo nome que o nome do campo ou propriedade onde a dependência deve ser injetada.
+
+- **Como Funciona**: O contêiner Spring verifica o nome do campo ou da propriedade onde a dependência deve ser injetada e procura um bean registrado com o mesmo nome no contêiner. Se encontrar uma correspondência, ele injeta essa instância no campo ou na propriedade.
+
+- **Exemplo**:
+
+  ```java
+  @Component
+  public class MyService {
+      private MyRepository repository;
+
+      @Autowired
+      public void setRepository(MyRepository repository) {
+          this.repository = repository;
+      }
+  }
+
+  @Component
+  public class MyRepository {
+      // implementação do repositório
+  }
+  ```
+
+  No exemplo acima, se você registrar o bean `MyRepository` no contêiner, o Spring injetará automaticamente a instância do `MyRepository` no campo `repository` do `MyService` com base no nome do campo.
+
+### 2. **byType**
+
+A injeção **byType** é baseada no tipo do bean. Com essa estratégia, o Spring procura um bean que corresponda ao tipo do campo ou da propriedade onde a dependência deve ser injetada.
+
+- **Como Funciona**: O Spring verifica o tipo do campo ou da propriedade e procura um bean registrado com o mesmo tipo no contêiner. Se encontrar exatamente um bean do tipo correspondente, ele injeta essa instância.
+
+- **Exemplo**:
+
+  ```java
+  @Component
+  public class MyService {
+      @Autowired
+      private MyRepository repository;
+
+      // A dependência MyRepository será injetada com base no tipo
+  }
+
+  @Component
+  public class MyRepository {
+      // implementação do repositório
+  }
+  ```
+
+  Neste exemplo, o Spring injetará a instância de `MyRepository` no campo `repository` de `MyService` com base no tipo `MyRepository`.
+
+### 3. **byConstructor**
+
+A injeção **byConstructor** é baseada no tipo dos parâmetros do construtor. Quando você utiliza essa estratégia, o Spring resolve as dependências fornecidas ao construtor de uma classe.
+
+- **Como Funciona**: O Spring analisa os parâmetros do construtor e procura por beans que correspondam aos tipos dos parâmetros. Ele cria a instância do bean e injeta as dependências fornecidas pelo construtor.
+
+- **Exemplo**:
+
+  ```java
+  @Component
+  public class MyService {
+      private final MyRepository repository;
+
+      @Autowired
+      public MyService(MyRepository repository) {
+          this.repository = repository;
+      }
+  }
+
+  @Component
+  public class MyRepository {
+      // implementação do repositório
+  }
+  ```
+
+  No exemplo acima, o Spring cria uma instância de `MyService` e injeta uma instância de `MyRepository` no construtor de `MyService`, com base no tipo do parâmetro do construtor.
 
