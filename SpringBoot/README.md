@@ -301,3 +301,5 @@ No contexto do Spring Boot, starters são pacotes de dependências pré-configur
 
 * spring-boot-starter-web: Inclui todas as dependências necessárias para desenvolver aplicações web.
 * spring-boot-starter-data-jpa: Inclui dependências para trabalhar com JPA e bancos de dados relacionais.
+
+Benefícios do Starter: coesão, versões compatíveis, otimização do tempo, configuração simples, foco no negócio.
