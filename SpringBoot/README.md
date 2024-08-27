@@ -50,7 +50,7 @@ graph TD
 
 * JDBC: Simplifica o uso do JDBC, eliminando a necessidade de código repetitivo ao lidar com exceções, abertura/fechamento de conexões, etc.
 
-* ORM: Integração com frameworks de mapeamento objeto-relacional (ORM) como Hibernate, JPA, JDO, entre outros.
+* [ORM](https://github.com/lelia-salles/Banco-de-Dados-Relacional/blob/main/conceitos-basicos.md): Integração com frameworks de mapeamento objeto-relacional (ORM) como Hibernate, JPA, JDO, entre outros.
 Transaction Management: Facilita a implementação de transações programáticas e declarativas.
 
 * Spring Data: Abstrai e simplifica o acesso a dados em diferentes fontes, oferecendo repositórios genéricos e suporte a várias tecnologias de persistência.
@@ -61,7 +61,7 @@ Transaction Management: Facilita a implementação de transações programática
 
 * Spring WebMVC: Um framework completo para desenvolvimento de aplicações web baseadas em MVC. Ele suporta injeção de dependência, validação, e manipulação de exceções, entre outras funcionalidades.
 
-* Spring WebFlux: Um módulo para desenvolvimento de aplicações reativas e não-bloqueantes, baseado no modelo de programação reativa.
+* [Spring WebFlux](https://github.com/lelia-salles/java/tree/main/ProgramacaoReativa/Reactor-Webflux): Um módulo para desenvolvimento de aplicações reativas e não-bloqueantes, baseado no modelo de programação reativa.
 
 * Spring WebSocket: Suporte a comunicação bidirecional em tempo real entre cliente e servidor usando WebSockets.
 
