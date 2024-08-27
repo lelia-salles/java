@@ -84,4 +84,24 @@ A principal vantagem da IoC é o **desacoplamento**. Ao transferir a responsabil
 
 Isso facilita a substituição e a modificação de componentes, promove o reuso e melhora a testabilidade, pois você pode facilmente injetar mocks ou stubs em vez de instâncias reais durante os testes.
 
-Em resumo, a inversão de controle permite que os componentes do sistema sejam mais flexíveis e independentes, resultando em um design mais modular e de fácil manutenção.
+## Injeção de Dependências
+
+A injeção de dependência é um padrão de design fundamental no desenvolvimento de software que visa promover o desacoplamento entre componentes e facilitar a gestão de suas dependências. 
+
+Em termos simples, a injeção de dependência é uma forma de ```implementar``` a inversão de controle (IoC) onde as dependências de um objeto são fornecidas a ele externamente, em vez de serem criadas e gerenciadas pelo próprio objeto.
+
+Quando um objeto necessita de outro objeto para funcionar corretamente, essa necessidade é chamada de dependência. Em vez de um objeto criar ou localizar suas próprias dependências, o contêiner de injeção de dependência é responsável por fornecer essas dependências. 
+
+Essa abordagem é comumente usada em frameworks modernos como o Spring, onde as dependências são configuradas externamente e injetadas no objeto quando ele é criado.
+
+Como dito anteriormente,  **injeção de dependência** pode ocorrer de várias maneiras: 
+
+* injeção por construtor, onde as dependências são passadas para o objeto através de seu construtor; 
+* injeção por setter, onde as dependências são fornecidas através de métodos setters após a criação do objeto; 
+* injeção por método, onde as dependências são passadas diretamente para métodos específicos do objeto.
+
+Esse padrão oferece várias vantagens, incluindo a redução do acoplamento entre componentes, o que torna o código mais modular e flexível. Também melhora a testabilidade, pois facilita a substituição de dependências reais por mocks ou stubs durante os testes. 
+
+Além disso, a injeção de dependência ajuda a centralizar a configuração e o gerenciamento de dependências, tornando o código mais fácil de manter e evoluir.
+
+
