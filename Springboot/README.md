@@ -316,4 +316,4 @@ Benefícios do Starter: coesão, versões compatíveis, otimização do tempo, c
 3. [https://www.reply.com](https://www.reply.com/solidsoft-reply/en/content/webservices-soap-and-rest-a-simple-introduction)
 4. [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/difference-between-spring-and-spring-boot/)
 5. [https://github.com/digitalinnovationone](https://github.com/digitalinnovationone/dio-springboot)
-6. []()
+6. [Github Dio Springboot](https://github.com/digitalinnovationone/dio-springboot/tree/main/spring-ioc-di-beans-autowired)
