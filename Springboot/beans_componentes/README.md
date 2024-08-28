@@ -11,7 +11,8 @@ As anotações `@Bean` e `@Component` são fundamentais no Spring para implement
 - **Exemplo:** Transformar um arquivo JSON em um objeto, como você mencionou. Também é comum em classes de serviço, repositórios, etc.
 
 ```java
-@Component
+@Component // significa que pode injetar este componente em qualquer ecossistema
+do springboot sem a necessidade de criar uma nova instância do objeto usando new)
 public class JsonParser {
     // lógica para transformar JSON em objeto
 }
