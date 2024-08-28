@@ -5,35 +5,63 @@ Beans são elementos responsáveis por criar objetos gerenciados por contêiners
 
 As anotações `@Bean` e `@Component` são fundamentais no Spring para implementar IoC e DI, mas cada uma tem seu uso específico:
 
-### @Component
+## @Component
 - **Uso:** Quando você tem acesso ao código-fonte e deseja que o Spring gerencie automaticamente seus objetos.
 - **Funcionamento:** O Spring escaneia o pacote e seus subpacotes em busca de classes anotadas com `@Component` e as registra como beans no contexto da aplicação.
-- **Exemplo:** Transformar um arquivo JSON em um objeto, como você mencionou. Também é comum em classes de serviço, repositórios, etc.
+- **Exemplo:** Transformar um arquivo JSON em um objeto. Também é comum em classes de serviço, repositórios, etc.
+
+Você está no caminho certo! Vamos ajustar um pouco o código para garantir que ele funcione corretamente.
+
+### Definindo o Componente
+
+Primeiro, definimos o componente `JsonParser` com a anotação `@Component`:
 
 ```java
-@Component // significa que pode injetar este componente em qualquer ecossistema
-do springboot sem a necessidade de criar uma nova instância do objeto usando new).
-
+@Component
 public class JsonParser {
     // lógica para transformar JSON em objeto
 }
-
-Para injetar este componente deve-se usar o CommandLineRunner e @Bean na classe onde se quer reutilizar. Ex:
-
-public static void main(String[] args){
-
-    SpringApplication.run[SpringNameApplication
-
-@Bean
-public CommandLineRunner run(JsonParser parser) throws exception {
-    //código, comandos
-};
-
-}
-
 ```
 
-### @Bean
+### Injetando o Componente com CommandLineRunner
+
+Para injetar o componente `JsonParser` e utilizá-lo na inicialização da aplicação, você pode usar o `CommandLineRunner` dentro de uma classe de configuração ou na classe principal da aplicação. Aqui está um exemplo completo:
+
+```java
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
+
+@SpringBootApplication
+public class SpringNameApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringNameApplication.class, args);
+    }
+
+    @Bean
+    public CommandLineRunner run(JsonParser parser) {
+        return args -> {
+            // código, comandos
+            System.out.println("Executando o CommandLineRunner com JsonParser");
+            // Exemplo de uso do parser
+            // parser.parseJson(...);
+        };
+    }
+}
+```
+
+### Explicação
+
+1. **Definição do Componente:** `@Component` é usado para que o Spring gerencie a instância de `JsonParser`.
+2. **Injeção de Dependência:** O `JsonParser` é injetado no método `run` do `CommandLineRunner` através da anotação `@Bean`.
+3. **Execução:** Quando a aplicação é iniciada, o método `run` é executado, permitindo que você utilize o `JsonParser` conforme necessário.
+
+Isso garante que você possa reutilizar o componente `JsonParser` sem precisar criar novas instâncias manualmente. Se precisar de mais alguma coisa ou tiver outras dúvidas, estou aqui para ajudar!
+
+## @Bean
 - **Uso:** Quando você precisa de mais controle sobre a criação do bean ou quando está configurando beans de bibliotecas de terceiros.
 - **Funcionamento:** Você define métodos anotados com `@Bean` dentro de uma classe de configuração (`@Configuration`). Esses métodos retornam instâncias dos objetos que você deseja que o Spring gerencie.
 - **Exemplo:** Configurar um bean de uma biblioteca externa que não pode ser anotada diretamente com `@Component`.
