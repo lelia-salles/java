@@ -1,5 +1,5 @@
 # Java 
-Repositório para agreagar um resumo sobre a linguagem em um só lugar, para que eu possa ter como referência e facilitar o meu trabalho.
+Repositório para agreagar um resumo sobre a linguagem em um só lugar, facilitar referência e facilitar e poupar trabalho.
 
 ## Básico
 
