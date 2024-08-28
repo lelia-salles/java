@@ -1,5 +1,5 @@
 # Java 
-Eu criei esse repositório para agreagar um resumo sobre a linguagem em um só lugar, para que eu possa ter como referência e facilitar o meu trabalho.
+Repositório para agreagar um resumo sobre a linguagem em um só lugar, para que eu possa ter como referência e facilitar o meu trabalho.
 
 ## Básico
 
