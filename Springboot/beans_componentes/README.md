@@ -80,7 +80,11 @@ public class AppConfig {
 - **@Component:** Use quando você está desenvolvendo a classe e pode anotá-la diretamente. É mais simples e direto.
 - **@Bean:** Use quando você precisa configurar beans de forma mais detalhada ou quando está lidando com classes de bibliotecas externas. 
 
-Essas práticas ajudam a manter seu código desacoplado e mais fácil de testar,.
+Essas práticas ajudam a manter seu código desacoplado e mais fácil de testar.
+
+#### Observação
+
+Caso haja necessidade de se criar vários beans para gerenciamento externo, a pr[atica recomendável é criar uma classe Bean ou BeanFactory para não poluir a classe Main com muitas anotações.
 
 **Referências:**
 (1) [Inversion of Control and Dependency Injection with Spring - Baeldung.](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring.)
