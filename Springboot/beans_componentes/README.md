@@ -12,10 +12,25 @@ As anotações `@Bean` e `@Component` são fundamentais no Spring para implement
 
 ```java
 @Component // significa que pode injetar este componente em qualquer ecossistema
-do springboot sem a necessidade de criar uma nova instância do objeto usando new)
+do springboot sem a necessidade de criar uma nova instância do objeto usando new).
+
 public class JsonParser {
     // lógica para transformar JSON em objeto
 }
+
+Para injetar este componente deve-se usar o CommandLineRunner e @Bean na classe onde se quer reutilizar. Ex:
+
+public static void main(String[] args){
+
+    SpringApplication.run[SpringNameApplication
+
+@Bean
+public CommandLineRunner run(JsonParser parser) throws exception {
+    //código, comandos
+};
+
+}
+
 ```
 
 ### @Bean
