@@ -3,7 +3,7 @@
 Beans são elementos responsáveis por criar objetos gerenciados por contêiners, mas quando usar as annotations @Bean e @Component para aprimorar a implementação da Inversão de Controle (IoC) e Injeção de Dependências (DI)?
 
 
-As anotações `@Bean` e `@Component` são fundamentais no Spring para implementar IoC e DI, mas cada uma tem seu uso específico:
+As anotações `@Bean` `@Autowired` e `@Component` são fundamentais no Spring para implementar IoC e DI, mas cada uma tem seu uso específico (`@Repository` e `@Service` veremos em outra ocasião):
 
 ## @Component
 - **Uso:** Quando você tem acesso ao código-fonte e deseja que o Spring gerencie automaticamente seus objetos.
