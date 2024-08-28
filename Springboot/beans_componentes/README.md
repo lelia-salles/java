@@ -59,7 +59,52 @@ public class SpringNameApplication {
 2. **Injeção de Dependência:** O `JsonParser` é injetado no método `run` do `CommandLineRunner` através da anotação `@Bean`.
 3. **Execução:** Quando a aplicação é iniciada, o método `run` é executado, permitindo que você utilize o `JsonParser` conforme necessário.
 
-Isso garante que você possa reutilizar o componente `JsonParser` sem precisar criar novas instâncias manualmente. Se precisar de mais alguma coisa ou tiver outras dúvidas, estou aqui para ajudar!
+Isso garante a reutilização do componente `JsonParser` sem precisar criar novas instâncias manualmente. O `CommandLineRunner` não é o que permite a injeção de dependência em si. A injeção de dependência é uma funcionalidade do Spring Framework, que permite que o Spring gerencie a criação e a injeção de objetos (beans) em outras partes da aplicação.
+
+- **Injeção de Dependência:** O Spring gerencia a criação e injeção de beans.
+- **CommandLineRunner:** Permite executar código após a inicialização da aplicação, mas não é responsável pela injeção de dependência.
+
+#### Papel do CommandLineRunner
+
+O `CommandLineRunner` é uma interface no Spring Boot que permite executar um bloco de código assim que a aplicação é iniciada. Ele é útil para executar tarefas iniciais, como carregar dados ou configurar serviços.
+
+#### Injeção de Dependência
+
+A injeção de dependência é realizada pelo Spring através de anotações como `@Autowired`, `@Component`, `@Service`, `@Repository`, e `@Bean`. No exemplo que discutimos, a injeção de dependência é feita pelo Spring quando ele injeta o `JsonParser` no método `run` do `CommandLineRunner`.
+
+#### Exemplo Completo
+
+```java
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+@SpringBootApplication
+public class SpringNameApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringNameApplication.class, args);
+    }
+
+    @Bean
+    public CommandLineRunner run(JsonParser parser) {
+        return args -> {
+            // código, comandos
+            System.out.println("Executando o CommandLineRunner com JsonParser");
+            // Exemplo de uso do parser
+            // parser.parseJson(...);
+        };
+    }
+}
+
+@Component
+public class JsonParser {
+    // lógica para transformar JSON em objeto
+}
+```
+
 
 ## @Bean
 - **Uso:** Quando você precisa de mais controle sobre a criação do bean ou quando está configurando beans de bibliotecas de terceiros.
@@ -84,7 +129,7 @@ Essas práticas ajudam a manter seu código desacoplado e mais fácil de testar.
 
 #### Observação
 
-Caso haja necessidade de se criar vários beans para gerenciamento externo, a pr[atica recomendável é criar uma classe Bean ou BeanFactory para não poluir a classe Main com muitas anotações, sendo necessária a inserção da anotação @Configuration antes de @Bean dependendo da versão
+Caso haja necessidade de se criar vários beans para gerenciamento externo, a prática recomendável é criar uma classe Bean ou BeanFactory para não poluir a classe Main com muitas anotações, sendo necessária a inserção da anotação @Configuration antes de @Bean dependendo da versão
 
 **Referências:**
 (1) [Inversion of Control and Dependency Injection with Spring - Baeldung.](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring.)
