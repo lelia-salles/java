@@ -106,7 +106,7 @@ Além disso, a injeção de dependência ajuda a centralizar a configuração e 
 
 ## Beans
 
-No contexto do Spring Framework, um **bean** é um objeto que é gerenciado pelo contêiner Spring. Representa componentes essenciais de uma aplicação é criado, configurado e mantido pelo contêiner, que cuida de seu ciclo de vida e suas dependências.
+No contexto do Spring Framework, um **bean** é um objeto que é gerenciado pelo contêiner Spring. Representa componentes essenciais de uma aplicação .É criado, configurado e mantido pelo contêiner que cuida de seu ciclo de vida e suas dependências.
 
 São objetos gerenciados pelo contêiner Spring, cuja criação e configuração são controladas externamente, promovendo um design desacoplado e facilitando a manutenção e a evolução da aplicação.
 
