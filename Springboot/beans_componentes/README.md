@@ -84,7 +84,7 @@ Essas práticas ajudam a manter seu código desacoplado e mais fácil de testar.
 
 #### Observação
 
-Caso haja necessidade de se criar vários beans para gerenciamento externo, a pr[atica recomendável é criar uma classe Bean ou BeanFactory para não poluir a classe Main com muitas anotações.
+Caso haja necessidade de se criar vários beans para gerenciamento externo, a pr[atica recomendável é criar uma classe Bean ou BeanFactory para não poluir a classe Main com muitas anotações, sendo necessária a inserção da anotação @Configuration antes de @Bean dependendo da versão
 
 **Referências:**
 (1) [Inversion of Control and Dependency Injection with Spring - Baeldung.](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring.)
