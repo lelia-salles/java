@@ -24,9 +24,64 @@ Aspectos das anotações de mapeamento usadas no JPA. A classe precisa ter `iden
 
 Essas ferramentas e especificações ajudam a simplificar o desenvolvimento e a manutenção de aplicações que precisam interagir com bancos de dados, tornando o processo mais eficiente e seguro.
 
+### O `@EntityManager` é uma interface fundamental na Java Persistence API (JPA) que permite interagir com o contexto de persistência. Aqui estão alguns pontos importantes sobre o `EntityManager`:
+
+Gerencia o ciclo de vida das entidades persistentes. Ele permite criar, ler, atualizar e deletar entidades no banco de dados. Cada instância de `EntityManager` está associada a um contexto de persistência, que é um conjunto de instâncias de entidades que são gerenciadas e rastreadas pelo `EntityManager`².
+
+### Principais Funcionalidades
+1. **Persistência de Entidades**: Você pode usar o método `persist()` para salvar uma nova entidade no banco de dados.
+2. **Busca de Entidades**: O método `find()` permite buscar uma entidade pelo seu identificador primário.
+3. **Atualização de Entidades**: O método `merge()` é usado para atualizar uma entidade existente.
+4. **Remoção de Entidades**: O método `remove()` permite deletar uma entidade do banco de dados.
+5. **Consultas**: Você pode criar consultas usando JPQL (Java Persistence Query Language) ou SQL nativo com os métodos `createQuery()` e `createNativeQuery()`¹.
+
+### Exemplo de Uso
+Aqui está um exemplo básico de como usar o `EntityManager`:
+
+```java
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+public class Main {
+    public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
+        EntityManager em = emf.createEntityManager();
+
+        em.getTransaction().begin();
+
+        // Criar uma nova entidade
+        MinhaEntidade entidade = new MinhaEntidade();
+        entidade.setId(1);
+        entidade.setNome("Exemplo");
+        em.persist(entidade);
+
+        // Buscar uma entidade
+        MinhaEntidade encontrada = em.find(MinhaEntidade.class, 1);
+        System.out.println(encontrada.getNome());
+
+        em.getTransaction().commit();
+        em.close();
+        emf.close();
+    }
+}
+```
+
+### Tipos de `EntityManager`
+- **Gerenciado pelo Contêiner**: O contêiner (como um servidor de aplicações) gerencia o ciclo de vida do `EntityManager`.
+- **Gerenciado pela Aplicação**: A aplicação cria e gerencia o ciclo de vida do `EntityManager`¹.
+
+O `EntityManager` é uma ferramenta poderosa que simplifica muito a interação com bancos de dados em aplicações Java, tornando o desenvolvimento mais eficiente e menos propenso a erros.
 
 ** Referências:**
- [freeCodeCamp](https://www.freecodecamp.org/portuguese/news/o-que-e-um-orm-o-significado-das-ferramentas-de-mapeamento-relacional-de-objetos-de-banco-de-dados/)
+[Baeldung](https://www.baeldung.com/hibernate-entitymanager)
+[Oracle](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html)
+[EntityManager (Java(TM) EE 7 Specification APIs) - Oracle.](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html).
+[ Guide to the Hibernate EntityManager | Baeldung.](https://www.baeldung.com/hibernate-entitymanager).
+[How to Access EntityManager with Spring Data | Baeldung.](https://www.baeldung.com/spring-data-entitymanager).
+[Java Persistence API (JPA) 之 EntityManager - CSDN博客. ](https://blog.csdn.net/htjl575896870/article/details/138151308).
+[EntityManager (Jakarta Persistence API documentation). ](https://jakartaee.github.io/persistence/latest-nightly/api/jakarta.persistence/jakarta/persistence/EntityManager.html).
+[freeCodeCamp](https://www.freecodecamp.org/portuguese/news/o-que-e-um-orm-o-significado-das-ferramentas-de-mapeamento-relacional-de-objetos-de-banco-de-dados/)
  [DIO](https://www.dio.me/articles/mapeamento-objeto-relacional-orm-em-java-simplificando-o-acesso-a-bancos-de-dados)
 [Universidade Java](http://www.universidadejava.com.br/jee/jpa-introducao/)
 [O que é um ORM – o significado das ferramentas de mapeamento relacional .... ](https://www.freecodecamp.org/portuguese/news/o-que-e-um-orm-o-significado-das-ferramentas-de-mapeamento-relacional-de-objetos-de-banco-de-dados/)
