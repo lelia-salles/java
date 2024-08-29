@@ -1,6 +1,6 @@
 # Configuration Properties
 
-@ConfigurationPorperties é uma anotação dependente do application.properties para centralizar todas as informações pertinentes a um contexto. Todos os valores de um Bean será enviado pelo application properties através do configuration properties. Exemplo de uso: autenticação, envio de mensagens, acesso FTP.
+@ConfigurationPorperties (prefix) é uma anotação dependente do application.properties para centralizar todas as informações pertinentes a um contexto. Todos os valores de um Bean será enviado pelo application properties através do configuration properties. Exemplo de uso: autenticação, envio de mensagens, acesso FTP.
 
 A anotação `@ConfigurationProperties` é usada para mapear propriedades de configuração externas (como arquivos `application.properties` ou `application.yml`) para objetos Java. Isso facilita a gestão de configurações complexas e hierárquicas.
 
