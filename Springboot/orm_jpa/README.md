@@ -74,6 +74,7 @@ public class Main {
 O `EntityManager` é uma ferramenta poderosa que simplifica muito a interação com bancos de dados em aplicações Java, tornando o desenvolvimento mais eficiente e menos propenso a erros.
 
 ** Referências:**
+[DIO](https://github.com/digitalinnovationone/dio-springboot)
 [Baeldung](https://www.baeldung.com/hibernate-entitymanager)
 [Oracle](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html)
 [EntityManager (Java(TM) EE 7 Specification APIs) - Oracle.](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html).
