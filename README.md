@@ -11,7 +11,7 @@ Repositório para agreagar um resumo sobre a linguagem em um só lugar, facilita
 ## Paradigmas
 
 1. [Programação Orientada a Objetos](https://github.com/lelia-salles/java/tree/main/ProgramacaoOrientada-a-Objetos(POO))
-2. [Programação Reatibva](https://github.com/lelia-salles/java/tree/main/ProgramacaoReativa/Reactor-Webflux)
+2. [Programação Reativa](https://github.com/lelia-salles/java/tree/main/ProgramacaoReativa/Reactor-Webflux)
 
 ## Intermediário
 
