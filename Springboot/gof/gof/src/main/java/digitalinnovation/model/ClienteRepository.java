@@ -1,5 +1,5 @@
 package digitalinnovation.model;
 
-public class ClienteRepository {
+public interface ClienteRepository extends CrudRepository<Cliente, Long> {
 
 }
