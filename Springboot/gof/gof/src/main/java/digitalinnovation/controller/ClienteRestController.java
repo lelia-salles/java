@@ -11,15 +11,15 @@ public class ClienteRestController {
     private ClienteRepository clienteRepository;
 
     @GetMapping
-    public Iterable<Cliente> buscarTodos(){
-        return clienteRepository.findAll();
+    public ResponseEntity<Iterable<Cliente>> buscarTodos(){ 
+        return ResponseEntity.ok(ClienteService.biuscarTodos());
     }
 
     @GetMapping("/{id}")
-    public Optional<Cliente> buscarPorId(Long id){
-        return clienteRepository.findById(id);
+    public ResponseEntity<Cliente> buscarPorId(@PathVariable Long id){
+        return clienteRepository.ok(ClienteService.buscarPorId(id);
     }
-
+// revisar abaixo
     @PostMapping
     public void inserir(@RequestBody Cliente cliente){
         clienteRepository.save(cliente);    
