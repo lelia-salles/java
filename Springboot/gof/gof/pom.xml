@@ -8,7 +8,7 @@
 		<version>3.3.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>one.digitalinnovation</groupId>
+	<groupId>digitalinnovation</groupId>
 	<artifactId>gof</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gof</name>
