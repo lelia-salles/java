@@ -11,6 +11,7 @@ public class Endereco {
     import javax.annotation.Generated;
     import javax.validation.Valid;
     
+    @Repository
     @Generated("jsonschema2pojo")
     public class Example {
     

@@ -1,5 +1,6 @@
 package digitalinnovation.model;
 
+@Repository
 public class Cliente {
 
     @Id
