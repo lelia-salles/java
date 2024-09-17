@@ -1,16 +1,14 @@
-package digitalinnovation.model;
+package digitalinnovation.model;   
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import javax.annotation.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import org.springframework.stereotype.Repository;
 public class Endereco {
 
-    -----------------------------------com.example.Example.java-----------------------------------
-
-    package com.example;
-    
-    import java.util.LinkedHashMap;
-    import java.util.Map;
-    import javax.annotation.Generated;
-    import javax.validation.Valid;
-    
+      
     @Repository
     @Generated("jsonschema2pojo")
     public class Example {
