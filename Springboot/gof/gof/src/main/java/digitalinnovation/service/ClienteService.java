@@ -20,7 +20,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 i
 public interface ClienteService {
 
-    Iterable<Cliente> buscarTodos();
+    static Iterable<Cliente> buscarTodos();
 
     Cliente buscarPorId(Long id);
     

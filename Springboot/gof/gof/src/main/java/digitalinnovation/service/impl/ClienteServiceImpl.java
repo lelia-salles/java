@@ -18,6 +18,8 @@ public class ClienteServiceImpl implements ClienteService {
         return null;
     }
 
+
+
     @Override
     public void inserir(Cliente cliente) {
         // TODO Auto-generated method stub  
