@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c52c0da4-13c2-4bb7-aa23-073fa100b8ba" name="Changes" comment="update" />
+    <list default="true" id="c52c0da4-13c2-4bb7-aa23-073fa100b8ba" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/GofApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/GofApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,5 +82,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/GofApplication.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
