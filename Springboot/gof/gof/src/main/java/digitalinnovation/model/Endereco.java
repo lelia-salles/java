@@ -6,6 +6,13 @@ import javax.annotation.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import org.springframework.stereotype.Repository;
+import digitalinnovation.model.Endereco;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
+import java.util.LinkedHashMap;
+
 public class Endereco {
 
       
