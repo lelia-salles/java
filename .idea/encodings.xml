@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Springboot/beans_componentes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/configuration-properties/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/dio-spring-data-jpa-exception-handler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/dio-spring-security-jwt/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Springboot/gof/gof/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/orm_jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/primeiros-passos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/properties_value/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/singleton_prototype/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/spring-data-jpa-hibernate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/spring-data-jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/spring-web-security-configure-adapter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/spring-web-security-database/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/springboot-web-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot/springboot-web/src/main/java" charset="UTF-8" />
   </component>
 </project>

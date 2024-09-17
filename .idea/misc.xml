@@ -6,6 +6,19 @@
       <list>
         <option value="$PROJECT_DIR$/Springboot/gof/gof/pom.xml" />
         <option value="$PROJECT_DIR$/Springboot/orm_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/springboot-web/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/spring-data-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/primeiros-passos/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/properties_value/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/beans_componentes/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/singleton_prototype/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/springboot-web-swagger/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/dio-spring-security-jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/configuration-properties/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/spring-data-jpa-hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/spring-web-security-database/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/dio-spring-data-jpa-exception-handler/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot/spring-web-security-configure-adapter/pom.xml" />
       </list>
     </option>
   </component>
