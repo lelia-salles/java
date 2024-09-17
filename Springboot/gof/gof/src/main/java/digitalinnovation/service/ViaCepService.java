@@ -8,12 +8,12 @@ import digitalinnovation.model.Endereco;
 
 
 // client do Feign
-// revisar
+
 
 @FeignClient   (name = "viacep", url = "https://viacep.com.br/ws")
 public interface ViaCepService {
 
-    //Endereco consultarCep(@PathVariable("cep") String cep);
+    Endereco consultarCep(@PathVariable("cep") String cep);
 
     
 
