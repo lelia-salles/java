@@ -17,19 +17,23 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-i
+
 public interface ClienteService {
 
-    static Iterable<Cliente> buscarTodos();
+    static Iterable<Cliente> buscarTodos() {
+        return null;
+    }
 
     Cliente buscarPorId(Long id);
-    
-    void inserir(Cliente cliente);  
+
+    Iterable<Cliente> buscarTodos();
+
+    void inserir(Cliente cliente);
 
     void atualizar(Long id, Cliente cliente);
 
     void deletar(Long id);
 
-    
+
 
 }

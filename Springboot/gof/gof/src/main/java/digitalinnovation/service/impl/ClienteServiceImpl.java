@@ -2,13 +2,6 @@ package digitalinnovation.service.impl;
 
 import digitalinnovation.model.Cliente;
 import digitalinnovation.service.ClienteService;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class ClienteServiceImpl implements ClienteService {
 
@@ -39,10 +32,11 @@ public class ClienteServiceImpl implements ClienteService {
     }   
 
     @Override
-    public void buscarPorId(Long id) {
+    public Cliente buscarPorId(Long id) {
         // TODO Auto-generated method stub
 
-    }   
+        return null;
+    }
 
     
 }
