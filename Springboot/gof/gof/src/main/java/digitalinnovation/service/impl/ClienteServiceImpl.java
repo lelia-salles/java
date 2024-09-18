@@ -5,6 +5,7 @@ import digitalinnovation.model.ClienteRepository;
 import digitalinnovation.model.Endereco;
 import digitalinnovation.model.EnderecoRepository;
 import digitalinnovation.service.ClienteService;
+import digitalinnovation.service.ViaCepService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,8 @@ public class ClienteServiceImpl implements ClienteService {
     private ClienteRepository clienteRepository;
     @Autowired
     private EnderecoRepository enderecoRepository;
+    @Autowired
+    private ViaCepService viaCepService; // cliente http
 
 
         // TODO Strategy: Implementar métodos definidos na interface
@@ -38,10 +41,15 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     public void inserir(Cliente cliente) {
         // FIXME Verificar se endereço do cliente já existe pelo cep
-        String cep = cliente.getEndereco().getCep();
-        Optional<Endereco> byId = enderecoRepository.findById(Long.valueOf(cep));
-
+            String cep = cliente.getEndereco().getCep();
+        Endereco endereco = enderecoRepository.findById(Long.valueOf(cep)).orElseGet(() -> {
+            // FIXME caso não exista, integrar com ViaCEP e persistir o retorno.
+            Endereco novoEndereco = viaCepService.consultarCep(cep);
+            enderecoRepository.save(novoEndereco);
+            return novoEndereco;
+        });
     }
+
 
     @Override
     public void atualizar(Long id, Cliente cliente) {
