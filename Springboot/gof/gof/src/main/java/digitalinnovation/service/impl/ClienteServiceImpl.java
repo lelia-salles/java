@@ -48,21 +48,12 @@ public class ClienteServiceImpl implements ClienteService {
         salvarClienteComCep(cliente);
     }
 
-    public void salvarClienteComCep(Cliente cliente) {
-        String cep = cliente.getEndereco().getCep();
-        Endereco endereco = enderecoRepository.findById(Long.valueOf(cep)).orElseGet(() -> {
-        Endereco novoEndereco = viaCepService.consultarCep(cep);
-        enderecoRepository.save(novoEndereco);
-        return novoEndereco;
-    });
-        cliente.setEndereco(endereco);
-        clienteRepository.save(cliente);
-    }
+
 
 
     @Override
     public void atualizar(Long id, Cliente cliente) {
-            // FIXME Buscar por ID, caso exista
+        // FIXME Buscar por ID, caso exista
         Optional<Cliente> clienteBd = clienteRepository.findById(id);
         if (clienteBd.isPresent()) {
             salvarClienteComCep(cliente);
@@ -71,26 +62,23 @@ public class ClienteServiceImpl implements ClienteService {
             //FIXME caso não exista, integrar com ViaCEP e persistir o reorno
             //FIXME alterar cliente vinculando o endereco novo ou existente
         }
-
     }
 
     @Override
     public void deletar(Long id) {
+            //TODO deletar cliente por id
+        clienteRepository.deleteById(id);
 
     }
-
-    /*@Override
-    public void atualizar(Long id, Cliente cliente) {
-        // TODO Auto-generated method stub
-
+    // esse código foi refatorado para metodo para ser reutilizado e renomeado como salvarClienteComCep
+    private void salvarClienteComCep(Cliente cliente) {
+        String cep = cliente.getEndereco().getCep();
+        Endereco endereco = enderecoRepository.findById(Long.valueOf(cep)).orElseGet(() -> {
+            Endereco novoEndereco = viaCepService.consultarCep(cep);
+            enderecoRepository.save(novoEndereco);
+            return novoEndereco;
+        });
+        cliente.setEndereco(endereco);
+        clienteRepository.save(cliente);
     }
-
-    @Override
-    public void deletar(Long id) {
-        // TODO Auto-generated method stub
-
     }
-*/
-
-    
-}
