@@ -24,7 +24,7 @@ public class ClienteServiceImpl implements ClienteService {
 
         // TODO Strategy: Implementar métodos definidos na interface
         // TODO Facade: Abstrair integração com subsistemas, provendo uma interface simples
-        @Override
+
         public Iterable<Cliente> buscarTodos() {
         // FIXME Buscar Todos os Clientes
         return clienteRepository.findAll();

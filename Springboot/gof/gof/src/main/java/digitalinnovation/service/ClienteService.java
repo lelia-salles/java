@@ -9,7 +9,9 @@ public interface ClienteService {
     // TODO Facade: Abstrair integração com subsistemas, provendo uma interface simples
     // TODO Strategy: Implementar métodos definidos na interface
     // TODO Facade: Abstrair integração com subsistemas, provendo uma interface simples
-    static Iterable<Cliente> buscarTodos();
+    static Iterable<Cliente> buscarTodos() {
+        return null;
+    }
 
     Cliente buscarPorId(Long id);
 
