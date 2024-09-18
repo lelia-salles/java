@@ -6,7 +6,6 @@ import digitalinnovation.model.Endereco;
 import digitalinnovation.model.EnderecoRepository;
 import digitalinnovation.service.ClienteService;
 import digitalinnovation.service.ViaCepService;
-import org.hibernate.boot.jaxb.internal.stax.FilteringXMLEventReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

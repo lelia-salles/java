@@ -7,23 +7,11 @@ public interface ClienteService {
 
     // TODO Strategy: Implementar métodos definidos na interface
     // TODO Facade: Abstrair integração com subsistemas, provendo uma interface simples
+    // TODO Strategy: Implementar métodos definidos na interface
+    // TODO Facade: Abstrair integração com subsistemas, provendo uma interface simples
     Iterable<Cliente> buscarTodos();
 
     Cliente buscarPorId(Long id);
-
-    /*static Iterable<Cliente> buscarTodos() {
-                return null;
-            }
-            Cliente buscarPorId(Long id);
-
-            Iterable<Cliente> buscarTodos();
-
-            @Override
-            ClienteService(Cliente cliente);
-
-  */
-
-
 
     void inserir(Cliente cliente);
     void atualizar(Long id, Cliente cliente);
