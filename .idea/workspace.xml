@@ -59,6 +59,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="digitalinnovation.model" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="digitalinnovation.service.impl" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="GofApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -201,7 +204,31 @@
       <option name="project" value="LOCAL" />
       <updated>1726669361324</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update">
+      <option name="closed" value="true" />
+      <created>1726669774147</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726669774147</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update">
+      <option name="closed" value="true" />
+      <created>1726669830209</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726669830209</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update">
+      <option name="closed" value="true" />
+      <created>1726669930405</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726669930405</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
