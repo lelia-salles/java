@@ -6,6 +6,7 @@ import digitalinnovation.model.Endereco;
 import digitalinnovation.model.EnderecoRepository;
 import digitalinnovation.service.ClienteService;
 import digitalinnovation.service.ViaCepService;
+import org.hibernate.boot.jaxb.internal.stax.FilteringXMLEventReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,19 +41,36 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public void inserir(Cliente cliente) {
-        // FIXME Verificar se endereço do cliente já existe pelo cep
-            String cep = cliente.getEndereco().getCep();
+            // FIXME Verificar se endereço do cliente já existe pelo cep
+            //FIXME caso não exista, integrar com ViaCEP e persistir o retorno.
+            // TODO inserir cliente, vinculando o endereco novo ou existente
+
+        salvarClienteComCep(cliente);
+    }
+
+    public void salvarClienteComCep(Cliente cliente) {
+        String cep = cliente.getEndereco().getCep();
         Endereco endereco = enderecoRepository.findById(Long.valueOf(cep)).orElseGet(() -> {
-            // FIXME caso não exista, integrar com ViaCEP e persistir o retorno.
-            Endereco novoEndereco = viaCepService.consultarCep(cep);
-            enderecoRepository.save(novoEndereco);
-            return novoEndereco;
-        });
+        Endereco novoEndereco = viaCepService.consultarCep(cep);
+        enderecoRepository.save(novoEndereco);
+        return novoEndereco;
+    });
+        cliente.setEndereco(endereco);
+        clienteRepository.save(cliente);
     }
 
 
     @Override
     public void atualizar(Long id, Cliente cliente) {
+            // FIXME Buscar por ID, caso exista
+        Optional<Cliente> clienteBd = clienteRepository.findById(id);
+        if (clienteBd.isPresent()) {
+            salvarClienteComCep(cliente);
+
+            //FIXME verificar se o endereco do cliente existe pelo cep
+            //FIXME caso não exista, integrar com ViaCEP e persistir o reorno
+            //FIXME alterar cliente vinculando o endereco novo ou existente
+        }
 
     }
 
