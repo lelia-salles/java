@@ -1,25 +1,14 @@
 package digitalinnovation.model;   
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import javax.annotation.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import org.springframework.stereotype.Repository;
-import digitalinnovation.model.Endereco;
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.io.Serializable;
-import java.util.LinkedHashMap;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
 public class Endereco {
 
       
-    @Repository
-    @Generated("jsonschema2pojo")
-    public class Example {
-    
+
+    @Id
     private String cep;
     private String logradouro;
     private String complemento;
@@ -33,9 +22,8 @@ public class Endereco {
     private String gia;
     private String ddd;
     private String siafi;
-    @Valid
-    private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
-    
+
+
     /**
      * @return the cep
      */
@@ -147,13 +135,6 @@ public class Endereco {
     this.siafi = siafi;
     }
     
-    public Map<String, Object> getAdditionalProperties() {
-    return this.additionalProperties;
+
     }
     
-    public void setAdditionalProperty(String name, Object value) {
-    this.additionalProperties.put(name, value);
-    }
-    
-    }
-}

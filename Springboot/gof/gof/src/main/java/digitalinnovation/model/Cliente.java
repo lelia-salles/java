@@ -1,11 +1,13 @@
 package digitalinnovation.model;
 
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import org.springframework.stereotype.Repository;
 
 
-
+@Repository
 @Entity
 public class Cliente {
 

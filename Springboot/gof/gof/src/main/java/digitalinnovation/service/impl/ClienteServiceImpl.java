@@ -1,28 +1,45 @@
 package digitalinnovation.service.impl;
 
 import digitalinnovation.model.Cliente;
+import digitalinnovation.model.ClienteRepository;
+import digitalinnovation.model.Endereco;
+import digitalinnovation.model.EnderecoRepository;
 import digitalinnovation.service.ClienteService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
+@Service
 public class ClienteServiceImpl implements ClienteService {
         // TODO Singleton: Injetar os componenetes do Sping com @Autowired
+    @Autowired
+    private ClienteRepository clienteRepository;
+    @Autowired
+    private EnderecoRepository enderecoRepository;
+
+
         // TODO Strategy: Implementar métodos definidos na interface
         // TODO Facade: Abstrair integração com subsistemas, provendo uma interface simples
-    @Override
-    public Iterable<Cliente> buscarTodos() {
+        @Override
+        public Iterable<Cliente> buscarTodos() {
         // FIXME Buscar Todos os Clientes
-        return null;
+        return clienteRepository.findAll();
     }
 
 
     @Override
     public Cliente buscarPorId(Long id) {
         /// FIXME Buscar Clientes por ID
-        return null;
+       Optional<Cliente> cliente = clienteRepository.findById(id);
+       return cliente.get();
     }
 
     @Override
     public void inserir(Cliente cliente) {
-        // TODO Auto-generated method stub  
+        // FIXME Verificar se endereço do cliente já existe pelo cep
+        String cep = cliente.getEndereco().getCep();
+        Optional<Endereco> byId = enderecoRepository.findById(Long.valueOf(cep));
 
     }
 

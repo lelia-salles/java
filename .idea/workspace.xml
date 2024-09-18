@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c52c0da4-13c2-4bb7-aa23-073fa100b8ba" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/model/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/service/ClienteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/service/impl/ClienteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot/gof/gof/src/main/java/digitalinnovation/service/impl/ClienteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726663593273</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1726664223625</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726664223625</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
